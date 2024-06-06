@@ -4,25 +4,22 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/global.css">
-    <title>Document</title>
+    <title>Village</title>
 </head>
 <body>
-       <!-- Menu topo -->
-       <div class="container">
-        <header
-            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <!-- Menu topo -->
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
             <div class="col-md-3 mb-2 mb-md-0">
                 <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
                     Village Luxury Resorts
                 </a>
             </div>
-
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
                 <li><a href="#" class="nav-link px-2">Hoteis</a></li>
                 <li><a href="#" class="nav-link px-2">Quartos</a></li>
             </ul>
-
             <div class="col-md-3 text-end">
                 <button type="button" class="btn btn-outline-warning me-2 text-white">Login</button>
                 <button type="button" class="btn btn-outline-warning me-2 text-white" onclick="sair()">Sair</button>
@@ -30,44 +27,41 @@
         </header>
     </div>
 
-
     <!-- Conteúdo principal -->
     <div class="container px-4 py-5" id="hanging-icons">
-        <h2 class="logo"> <img src="assets/img/Logo.jpeg" alt=""></h2>
+        <h2 class="logo"><img src="assets/img/Logo.jpeg" alt=""></h2>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
             <div class="col d-flex align-items-start">
-                <div
-                    class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                     <svg class="bi" width="1em" height="1em">
                         <use xlink:href="#toggles2"></use>
                     </svg>
                 </div>
-                <div>
-                    <h3 class="fs-2">Hoteis</h3>
-                    <p>Quantidade de hoteis cadastrados</p>
-                    <div id="div-total-alunos" style="padding: 10px;">--</div>
-                    <a href="#" class="btn btn-outline-warning me-2 text-white">
-                        Cadastro de Hoteis
-                    </a>
-                </div>
+                <section class="divBotoes">
+                    <div class="Botoes">
+                        <h3 class="fs-2">Hoteis</h3>
+                        <p>Quantidade de hoteis cadastrados</p>
+                        <div id="div-total-alunos" style="padding: 10px;">--</div>
+                        <a href="#" class="btn btn-outline-warning me-2 text-white">Cadastro de Hoteis</a>
+                    </div>
+                </section>
             </div>
             <div class="col d-flex align-items-start">
-                <div
-                    class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                     <svg class="bi" width="1em" height="1em">
                         <use xlink:href="#cpu-fill"></use>
                     </svg>
                 </div>
-                <div>
-                    <h3 class="fs-2">Quartos</h3>
-                    <p>Quantidade de quartos cadastrados</p>
-                    <div id="div-total-disciplinas" style="padding: 10px;">--</div>
-                    <a href="#" class="btn btn-outline-warning me-2 text-white">
-                        Cadastro de Quartos
-                    </a>
-                </div>
+                <section class="divBotoes">
+                    <div class="Botoes">
+                        <h3 class="fs-2">Quartos</h3>
+                        <p>Quantidade de quartos cadastrados</p>
+                        <div id="div-total-disciplinas" style="padding: 10px;">--</div>
+                        <a href="#" class="btn btn-outline-warning me-2 text-white">Cadastro de Quartos</a>
+                    </div>
+                </section>
             </div>
-         </div>
+        </div>
     </div>
 
     <script src="lib/js/bootstrap.bundle.min.js"></script>

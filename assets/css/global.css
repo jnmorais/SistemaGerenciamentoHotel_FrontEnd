@@ -1,15 +1,36 @@
-body{
-    background-color:#383c21;
+body {
+background-color: #393d22;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
+
 h2.logo{
     text-align: center;
 }
+
 a{
     color: #c49c29;
 }
+
 h2.logo img {
     max-width: 100%;
     height: 230px;
     margin: 0 auto;
+}
+
+
+.Botoes{
+    
+    border: 2px solid #c49c29;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.divBotoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
