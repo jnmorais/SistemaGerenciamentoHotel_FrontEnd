@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserir Hotel</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/global.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <!-- Conteúdo do formulário -->
+    <div class="container">
+        <h2>Inserir Hotel</h2>
+
+        <!-- Div para exibir mensagens de erro -->
+        <div class="alert alert-danger collapse" role="alert" id="div-alert-message">
+            <a class="close" onclick="esconderAlert()">×</a>
+        </div>
+
+        <!-- Formulário -->
+        <form id="form-inserir-hotel" action="listar-hoteis.html">
+
+            <div class="form-group">
+                <label for="input-hotel">Nome Hotel</label>
+                <input type="text" class="form-control" id="input-hotel" placeholder="Nome Hotel" maxlength="100"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="input-end">Endereço</label>
+                <input type="text" class="form-control" id="input-end" placeholder="Endereço" maxlength="200"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="input-classificacao">Classificação</label>
+                <input type="number" class="form-control" id="input-classificacao"
+                    placeholder="Classificação (1-5)" min="1" max="5" required>
+            </div>
+
+            <div class="form-group">
+                <label for="input-wifi">Wi-Fi</label>
+                <select class="form-control" id="input-wifi" required>
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="input-estacionamento">Estacionamento</label>
+                <select class="form-control" id="input-estacionamento" required>
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="input-cafe">Café da Manhã</label>
+                <select class="form-control" id="input-cafe" required>
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="input-almoco">Almoço</label>
+                <select class="form-control" id="input-almoco" required>
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="input-janta">Janta</label>
+                <select class="form-control" id="input-janta" required>
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
+                </select>
+            </div>
+
+            <hr>
+            <a class="btn btn-secondary" href="listar-hoteis.html" role="button">Voltar</a>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+
+        </form>
+
+    </div>
+
+    <!-- jQuery e Bootstrap Bundle (incluindo Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/js/incluir-hotel.js"></script>4
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Erro ao carregar navbar:', error));
+        });
+    </script>
+
+</body>
+
+</html>

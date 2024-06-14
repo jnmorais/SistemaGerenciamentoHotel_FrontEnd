@@ -34,3 +34,20 @@ h2.logo img {
     justify-content: center;
     width: 100%;
 }
+.img-quarto{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.img-hotel{
+    max-width: 95%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.nav-link:hover {
+    color: white; /* Cor dos links quando o mouse está sobre eles */
+}
+

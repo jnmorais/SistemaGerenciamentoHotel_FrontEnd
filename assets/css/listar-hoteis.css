@@ -1,0 +1,52 @@
+/* Customizando o DataTable */
+.dataTables_wrapper .dataTables_filter label {
+    color: #c49c29;
+    font-weight: bold;
+}
+
+.dataTables_wrapper .dataTables_length label {
+    color: #c49c29;
+    font-weight: bold;
+}
+
+.dataTables_wrapper .dataTables_info {
+    color: white;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: white !important;
+    background-color: #393d22 !important;
+    border: 1px solid #c49c29;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 2px;
+}
+.table {
+    color: white; /* Cor do texto */
+}
+
+.table thead th {
+    background-color: #393d22; /* Cor de fundo do cabeçalho */
+    color: #c49c29; /* Cor do texto do cabeçalho */
+}
+
+.table tbody tr {
+    background-color: #555b35; /* Cor de fundo das linhas da tabela */
+}
+
+.table tbody tr:hover {
+    background-color: #666e4d; /* Cor de fundo ao passar o mouse */
+}
+
+.table tbody td {
+    color: white; /* Cor do texto */
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #c49c29 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #c49c29 !important;
+    color: white !important;
+}
