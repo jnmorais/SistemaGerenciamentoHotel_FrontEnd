@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Hotel</title>
-
-    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="assets/css/global.css">
+    <title>Visualizar Hotel</title>
 </head>
 
 <body>
@@ -31,17 +31,20 @@
             <div class="col-md-3"></div>
         </header>
     </div>
-    <div class="container">
-        <h2>Editar Hotel</h2>
 
+
+    <div class="container">
+        <h2>Visualizar Hotel</h2>
+    
         <div class="alert alert-danger collapse" role="alert" id="div-alert-message">
             <a class="close" onclick="esconderAlert()">×</a>
         </div>
-
-        <form id="form-editar-hotel" action="listar-hoteis.html">
+        <form id="form-editar-aluno" action="listar-hoteis.html">
+    
             <div class="form-group">
-                <label for="input-hotel">Nome</label>
-                <input type="text" class="form-control" id="input-hotel" placeholder="Nome" maxlength="100" required>
+                <label for="input-hotel">Nome Hotel</label>
+                <input type="text" class="form-control" id="input-hotel" placeholder="Nome Hotel" maxlength="100"
+                    required>
             </div>
 
             <div class="form-group">
@@ -99,27 +102,34 @@
                     <option value="false">Não</option>
                 </select>
             </div>
-
             <div class="form-group">
                 <label for="input-qtd-quartos">Quantidade de Quartos</label>
                 <input type="number" class="form-control" id="input-qtd-quartos" placeholder="Quantidade de Quartos"
                     required>
             </div>
-
+    
             <hr>
             <a class="btn btn-secondary" href="listar-hoteis.html" role="button">Voltar</a>
-            <button type="submit" class="btn btn-primary">Salvar</button>
+    
         </form>
+    
     </div>
 
-    <!-- jQuery (Versão Completa) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <!-- Bootstrap Bundle (incluindo Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
+    <script src="lib/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
 
-    <!-- Script personalizado -->
-    <script src="assets/js/editar-hotel.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="http://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+
+<script src="assets/js/visualizar-hotel.js"></script>
 
 </body>
 

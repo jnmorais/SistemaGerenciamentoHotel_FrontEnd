@@ -9,14 +9,18 @@ function listarHoteis() {
             console.log('Dados retornados pela API:', result);
             var html = '';
             $.each(result, function(i, data) {
-                html += `<tr><td>${data.nome}</td>`;
+                html += `<tr>`;
+                html += `<td>${data.nome}</td>`;
+                html += `<td>${data.endereco}</td>`;
+                html += `<td>${data.classificacao}</td>`;
                 html += `<td>${new Date(data.dataFundacao).toLocaleDateString('pt-BR')}</td>`;
                 html += `<td>
                             <a class="btn-action btn btn-primary" href="editar-hotel.html?id=${data.id}"><i class="bi bi-pencil-fill"></i></a>
                             <a class="btn-action btn btn-info" href="visualizar-hotel.html?id=${data.id}"><i class="bi bi-search"></i></a>
                             <a class="btn-action btn btn-success" href="incluir-hotel.html"><i class="bi bi-plus"></i></a>
                             <a class="btn-action btn btn-danger" href="#" onclick="removerHotel(${data.id})"><i class="bi bi-archive-fill"></i></a>
-                         </td></tr>`;
+                         </td>`;
+                html += `</tr>`;
             });
             console.log('HTML gerado:', html);
             $("#tbListarHoteisBody").html(html);

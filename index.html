@@ -10,7 +10,23 @@
 
 <body>
     <!-- Menu topo -->
-    <div id="navbar-placeholder"></div>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-between py-3 mb-4 border-bottom">
+            <div class="col-md-3 mb-2 mb-md-0 d-flex align-items-center">
+                <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+                    <img src="assets/img/LOGO Village.png" alt="Logo" width="50" height="50" class="me-2">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <ul class="nav justify-content-center mb-2 mb-md-0">
+                    <li><a href="listar-hoteis.html" class="nav-link px-2">Hoteis</a></li>
+                    <li><a href="#" class="nav-link px-2">Quartos</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3"></div>
+        </header>
+    </div>
+
 
     <!-- Conteúdo principal -->
     <div class="container px-4 py-5" id="hanging-icons">
@@ -25,12 +41,12 @@
                 </div>
                 <section class="divBotoes">
                     <div class="Botoes">
-                        <h3 class="fs-2">Hoteis</h3>
+                        <h3 class="fs-2">Hóteis</h3>
                         <img src="assets/img/Hotel.jpeg" alt="" class="img-hotel">
                         <br>
-                        <p>Quantidade de hoteis cadastrados</p>
+                        <p>Quantidade de hóteis cadastrados</p>
                         <div id="div-total-alunos" style="padding: 10px;">--</div>
-                        <a href="incluir-hotel.html" class="btn btn-outline-warning me-2 text-white">Cadastro de Hoteis</a>
+                        <a href="listar-hoteis.html" class="btn btn-outline-warning me-2 text-white">Veja os Hóteis</a>
                     </div>
                 </section>
             </div>
@@ -48,7 +64,7 @@
                         <br>
                         <p>Quantidade de quartos cadastrados</p>
                         <div id="div-total-disciplinas" style="padding: 10px;">--</div>
-                        <a href="#" class="btn btn-outline-warning me-2 text-white">Cadastro de Quartos</a>
+                        <a href="#" class="btn btn-outline-warning me-2 text-white">Veja os Quartos</a>
                     </div>
                 </section>
             </div>
@@ -57,16 +73,6 @@
 
     <script src="lib/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('navbar-placeholder').innerHTML = data;
-                })
-                .catch(error => console.error('Erro ao carregar navbar:', error));
-        });
-    </script>
 </body>
 
 </html>

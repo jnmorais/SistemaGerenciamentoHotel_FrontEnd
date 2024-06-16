@@ -1,14 +1,14 @@
 body {
-background-color: #393d22;
+    background-color: #393d22;
     color: white;
     font-family: 'Roboto', sans-serif;
 }
 
-h2.logo{
+h2.logo {
     text-align: center;
 }
 
-a{
+a {
     color: #c49c29;
 }
 
@@ -18,9 +18,7 @@ h2.logo img {
     margin: 0 auto;
 }
 
-
-.Botoes{
-    
+.Botoes {
     border: 2px solid #c49c29;
     padding: 20px;
     border-radius: 10px;
@@ -34,13 +32,15 @@ h2.logo img {
     justify-content: center;
     width: 100%;
 }
-.img-quarto{
+
+.img-quarto {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
 }
-.img-hotel{
+
+.img-hotel {
     max-width: 95%;
     height: auto;
     display: block;
@@ -50,4 +50,3 @@ h2.logo img {
 .nav-link:hover {
     color: white; /* Cor dos links quando o mouse está sobre eles */
 }
-
