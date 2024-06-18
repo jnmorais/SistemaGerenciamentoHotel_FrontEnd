@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Hotel</title>
+    <title>Inserir Quarto</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -31,27 +31,31 @@
             <div class="col-md-3"></div>
         </header>
     </div>
+    <!-- Conteúdo do formulário -->
     <div class="container">
-        <h2>Editar Hotel</h2>
+        <h2>Inserir Quarto</h2>
 
+        <!-- Div para exibir mensagens de erro -->
         <div class="alert alert-danger collapse" role="alert" id="div-alert-message">
             <a class="close" onclick="esconderAlert()">×</a>
         </div>
 
-        <form id="form-editar-hotel" action="listar-hoteis.html">
+        <!-- Formulário -->
+        <form id="form-inserir-hotel" action="listar-quartos.html">
+
             <div class="form-group">
-                <label for="input-hotel">Nome</label>
-                <input type="text" class="form-control" id="input-hotel" placeholder="Nome" maxlength="100" required>
+                <label for="input-hotel">Numero</label>
+                <input type="text" class="form-control" id="input-hotel" placeholder="Numero do Quarto" maxlength="100"
+                    required>
             </div>
 
             <div class="form-group">
-                <label for="input-end">Endereço</label>
-                <input type="text" class="form-control" id="input-end" placeholder="Endereço" maxlength="200" required>
+                <label for="input-end">tamanho</label>
+                <input type="text" class="form-control" id="input-end" placeholder="Tamanho" maxlength="200" required>
             </div>
-
             <div class="form-group">
-                <label for="input-data-fundacao">Data de Fundação</label>
-                <input type="date" class="form-control" id="input-data-fundacao" required>
+                <label for="input-data-fundacao">status</label>
+                <input type="tel" class="form-control" id="input-data-fundacao" required>
             </div>
 
             <div class="form-group">
@@ -100,26 +104,21 @@
                 </select>
             </div>
 
-            <div class="form-group">
-                <label for="input-qtd-quartos">Quantidade de Quartos</label>
-                <input type="number" class="form-control" id="input-qtd-quartos" placeholder="Quantidade de Quartos"
-                    required>
-            </div>
-
             <hr>
             <a class="btn btn-secondary" href="listar-hoteis.html" role="button">Voltar</a>
             <button type="submit" class="btn btn-primary">Salvar</button>
+
         </form>
+
     </div>
 
-    <!-- jQuery (Versão Completa) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <!-- Bootstrap Bundle (incluindo Popper) -->
+    <!-- jQuery e Bootstrap Bundle (incluindo Popper) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
 
-    <!-- Script personalizado -->
-    <script src="assets/js/editar-hotel.js"></script>
+    <script src="assets/js/incluir-hotel.js"></script>
 
 </body>
 

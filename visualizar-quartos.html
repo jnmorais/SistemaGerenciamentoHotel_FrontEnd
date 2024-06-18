@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="http://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="assets/css/global.css">
-    <title>Visualizar Hotel</title>
+    <title>Visualizar Quartos</title>
 </head>
 
 <body>
@@ -42,72 +42,27 @@
         <form id="form-editar-aluno" action="listar-hoteis.html">
     
             <div class="form-group">
-                <label for="input-hotel">Nome Hotel</label>
-                <input type="text" class="form-control" id="input-hotel" placeholder="Nome Hotel" maxlength="100"
+                <label for="input-hotel">Numero Quarto</label>
+                <input type="number" class="form-control" id="input-hotel" placeholder="Numero Quarto" maxlength="5"
                     required>
             </div>
 
             <div class="form-group">
-                <label for="input-end">Endereço</label>
-                <input type="text" class="form-control" id="input-end" placeholder="Endereço" maxlength="200" required>
+                <label for="input-end">Tamanho</label>
+                <input type="text" class="form-control" id="input-end" placeholder="Endereço" maxlength="10" required>
             </div>
 
             <div class="form-group">
-                <label for="input-data-fundacao">Data de Fundação</label>
-                <input type="date" class="form-control" id="input-data-fundacao" required>
+                <label for="input-data-fundacao">Vista</label>
+                <input type="text" class="form-control" id="input-data-fundacao" placeholder="Vista" required>
             </div>
 
             <div class="form-group">
-                <label for="input-classificacao">Classificação</label>
-                <input type="number" class="form-control" id="input-classificacao" placeholder="Classificação (1-5)"
-                    min="1" max="5" required>
+                <label for="input-data-fundacao">Quantidade Leito</label>
+                <input type="number" class="form-control" id="input-data-fundacao" placeholder="Quantidade Leito" maxlength="2" required>
             </div>
 
-            <div class="form-group">
-                <label for="input-wifi">Wi-Fi</label>
-                <select class="form-control" id="input-wifi" required>
-                    <option value="true">Sim</option>
-                    <option value="false">Não</option>
-                </select>
-            </div>
 
-            <div class="form-group">
-                <label for="input-estacionamento">Estacionamento</label>
-                <select class="form-control" id="input-estacionamento" required>
-                    <option value="true">Sim</option>
-                    <option value="false">Não</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="input-cafe">Café da Manhã</label>
-                <select class="form-control" id="input-cafe" required>
-                    <option value="true">Sim</option>
-                    <option value="false">Não</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="input-almoco">Almoço</label>
-                <select class="form-control" id="input-almoco" required>
-                    <option value="true">Sim</option>
-                    <option value="false">Não</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="input-janta">Janta</label>
-                <select class="form-control" id="input-janta" required>
-                    <option value="true">Sim</option>
-                    <option value="false">Não</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="input-qtd-quartos">Quantidade de Quartos</label>
-                <input type="number" class="form-control" id="input-qtd-quartos" placeholder="Quantidade de Quartos"
-                    required>
-            </div>
-    
             <hr>
             <a class="btn btn-secondary" href="listar-hoteis.html" role="button">Voltar</a>
     
