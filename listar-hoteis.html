@@ -19,6 +19,21 @@
         .dataTables_length label select {
             color: rgb(242, 219, 11) !important;
         }
+
+        .btn-custom {
+            color: aliceblue;
+            border: 2px solid #c49c29;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .btn-custom:hover{
+            background-color: #fdc203;
+            color: white;
+            text-decoration: none;
+        }
+
+
     </style>
 </head>
 
@@ -59,6 +74,11 @@
             <tbody id="tbListarHoteisBody">
             </tbody>
         </table>
+
+         <!-- Botão Adicionar Hotel -->
+         <div class="d-flex justify-content-center mt-4">
+            <a href="incluir-hotel.html" class="btn-custom">Adicionar Hotel</a>
+        </div>
     </div>
 
     <!-- jQuery and Bootstrap Bundle -->

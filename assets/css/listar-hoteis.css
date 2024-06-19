@@ -50,3 +50,8 @@
     background-color: #c49c29 !important;
     color: white !important;
 }
+
+.addHotel{
+    border: 2px solid #c49c29;
+    padding: 20px;
+}
