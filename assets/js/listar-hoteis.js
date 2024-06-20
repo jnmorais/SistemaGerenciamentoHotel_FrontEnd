@@ -58,7 +58,7 @@ function removerHotel(id) {
             url: 'http://localhost:8080/api/hotel/' + id,
             dataType: 'json',
             success: function(result, status, xhr) {
-                if (xhr.status === 200) {
+                if (xhr.status == 200) {
                     alert('Hotel removido com sucesso');
                     location.reload();  // Recarregar a página
                 } else {

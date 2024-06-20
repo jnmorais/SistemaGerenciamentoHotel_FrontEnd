@@ -7,7 +7,7 @@ $(document).ready(function () {
 
         // Criar objeto formData com os dados do formulário
         var formData = {
-            'nomeHotel': $('#input-hotel').val(),
+            'nome': $('#input-hotel').val(),
             'endereco': $('#input-end').val(),
             'classificacao': parseInt($('#input-classificacao').val()),
             'wifi': $('#input-wifi').val() === 'true',
@@ -31,11 +31,11 @@ $(document).ready(function () {
             data: JSON.stringify(formData),
             success: function (data) {
                 console.log('Sucesso:', data);
-                location.href = 'gerenciar-quartos.html?hotelId=' + data.id; // Redireciona para a página de gerenciamento de quartos com o ID do hotel
+                location.href = 'http://127.0.0.1:5500/listar-hoteis.html'; // Redireciona para a página de gerenciamento de quartos com o ID do hotel
             },
             error: function (xhr, textStatus, errorThrown) {
                 console.error('Erro:', xhr.responseJSON);
-                var message = xhr.responseJSON ? JSON.stringify(xhr.responseJSON) : 'Erro ao processar a solicitação';
+                var message = xhr.responseJSON ? JSON.stringify(xhr.responseJSON) : 'Erro ao processar a Solicitação';
                 $('#div-alert-message').text(message);
                 $('#div-alert-message').fadeIn();
             }
