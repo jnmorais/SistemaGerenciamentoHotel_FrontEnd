@@ -41,75 +41,35 @@
         </div>
 
         <!-- Formulário -->
-        <form id="form-inserir-hotel" action="listar-quartos.html">
+        <form id="form-inserir-quarto" action="listar-quartos.html">
 
             <div class="form-group">
-                <label for="input-hotel">Numero</label>
-                <input type="text" class="form-control" id="input-hotel" placeholder="Numero do Quarto" maxlength="100"
+                <label for="input-quarto">Identificação</label>
+                <input type="text" class="form-control" id="input-quarto" placeholder="Numero do Quarto" maxlength="100"
                     required>
             </div>
 
             <div class="form-group">
-                <label for="input-end">tamanho</label>
-                <input type="text" class="form-control" id="input-end" placeholder="Tamanho" maxlength="200" required>
+                <label for="input-tamanho">Tamanho</label>
+                <input type="text" class="form-control" id="input-tamanho" placeholder="Tamanho" maxlength="200" required>
             </div>
             <div class="form-group">
-                <label for="input-data-fundacao">status</label>
-                <input type="tel" class="form-control" id="input-data-fundacao" required>
+                <label for="input-status">Status</label>
+                <input type="text" class="form-control" id="input-status" required>
             </div>
-
             <div class="form-group">
-                <label for="input-classificacao">Classificação</label>
-                <input type="number" class="form-control" id="input-classificacao" placeholder="Classificação (1-5)"
-                    min="1" max="5" required>
+                <label for="input-hotel">Hotel</label>
+                <select type="tel" class="form-control" id="input-hotel" required>
             </div>
 
-            <div class="form-group">
-                <label for="input-wifi">Wi-Fi</label>
-                <select class="form-control" id="input-wifi" required>
-                    <option value="true">Sim</option>
-                    <option value="false">Não</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="input-estacionamento">Estacionamento</label>
-                <select class="form-control" id="input-estacionamento" required>
-                    <option value="true">Sim</option>
-                    <option value="false">Não</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="input-cafe">Café da Manhã</label>
-                <select class="form-control" id="input-cafe" required>
-                    <option value="true">Sim</option>
-                    <option value="false">Não</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="input-almoco">Almoço</label>
-                <select class="form-control" id="input-almoco" required>
-                    <option value="true">Sim</option>
-                    <option value="false">Não</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="input-janta">Janta</label>
-                <select class="form-control" id="input-janta" required>
-                    <option value="true">Sim</option>
-                    <option value="false">Não</option>
-                </select>
-            </div>
-
-            <hr>
-            <a class="btn btn-secondary" href="listar-hoteis.html" role="button">Voltar</a>
-            <button type="submit" class="btn btn-primary">Salvar</button>
+           
+           
 
         </form>
-
+        <hr>
+        <a class="btn btn-secondary" href="listar-hoteis.html" role="button">Voltar</a>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </hr>
     </div>
 
     <!-- jQuery e Bootstrap Bundle (incluindo Popper) -->
