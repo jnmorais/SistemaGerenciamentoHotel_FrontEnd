@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,10 +8,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/global.css">
 </head>
-
 <body>
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-between py-3 mb-4 border-bottom">
@@ -42,44 +40,70 @@
 
         <!-- Formulário -->
         <form id="form-inserir-quarto" action="listar-quartos.html">
-
             <div class="form-group">
                 <label for="input-quarto">Identificação</label>
-                <input type="text" class="form-control" id="input-quarto" placeholder="Numero do Quarto" maxlength="100"
-                    required>
+                <input type="text" class="form-control" id="input-quarto" placeholder="Numero do Quarto" maxlength="100" required>
             </div>
 
             <div class="form-group">
                 <label for="input-tamanho">Tamanho</label>
-                <input type="text" class="form-control" id="input-tamanho" placeholder="Tamanho" maxlength="200" required>
+                <input type="number" class="form-control" id="input-tamanho" placeholder="Tamanho" required>
             </div>
+
             <div class="form-group">
                 <label for="input-status">Status</label>
                 <input type="text" class="form-control" id="input-status" required>
             </div>
+
             <div class="form-group">
-                <label for="input-hotel">Hotel</label>
-                <select type="tel" class="form-control" id="input-hotel" required>
+                <label for="input-tipo-cama">Tipo de Cama</label>
+                <input type="text" class="form-control" id="input-tipo-cama" placeholder="Tipo de Cama" required>
             </div>
 
-           
-           
+            <div class="form-group">
+                <label for="input-quantidade-leito">Quantidade de Leitos</label>
+                <input type="number" class="form-control" id="input-quantidade-leito" placeholder="Quantidade de Leitos" required>
+            </div>
 
+            <div class="form-group">
+                <label for="input-preco">Preço</label>
+                <input type="number" class="form-control" id="input-preco" placeholder="Preço" required>
+            </div>
+
+            <div class="form-group">
+                <label for="input-vista">Vista</label>
+                <input type="text" class="form-control" id="input-vista" placeholder="Vista" required>
+            </div>
+
+            <div class="form-group">
+                <label for="input-comodidades">Comodidades</label>
+                <textarea class="form-control" id="input-comodidades" placeholder="Comodidades" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="input-descricao">Descrição</label>
+                <textarea class="form-control" id="input-descricao" placeholder="Descrição" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="input-hotel">Hotel</label>
+                <select class="form-control" id="input-hotel" required>
+                    <option value="">Selecione um Hotel</option>
+                    <!-- As opções serão adicionadas aqui via JavaScript -->
+                </select>
+            </div>
+
+            <hr>
+            <a class="btn btn-secondary" href="listar-quartos.html" role="button">Voltar</a>
+            <button type="submit" class="btn btn-primary">Salvar</button>
         </form>
-        <hr>
-        <a class="btn btn-secondary" href="listar-hoteis.html" role="button">Voltar</a>
-        <button type="submit" class="btn btn-primary">Salvar</button>
-    </hr>
     </div>
 
     <!-- jQuery e Bootstrap Bundle (incluindo Popper) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
-    <script src="assets/js/incluir-hotel.js"></script>
-
+    <script src="assets/js/Incluir-quarto.js"></script>
 </body>
-
 </html>
