@@ -1,11 +1,9 @@
 $(document).ready(function () {
-    // Processar formulário de inserção de hotel
     $('#form-inserir-hotel').submit(function (event) {
         event.preventDefault();
 
         var dataFundacao = new Date($('#input-data-fundacao').val());
 
-        // Criar objeto formData com os dados do formulário
         var formData = {
             'nome': $('#input-hotel').val(),
             'endereco': $('#input-end').val(),
@@ -18,9 +16,8 @@ $(document).ready(function () {
             'dataFundacao': dataFundacao.toISOString()
         };
 
-        console.log(JSON.stringify(formData)); // Verifique os dados no console (opcional)
+        console.log(JSON.stringify(formData));
 
-        // Enviar os dados via AJAX
         $.ajax({
             headers: {
                 'Accept': 'application/json',
@@ -31,7 +28,7 @@ $(document).ready(function () {
             data: JSON.stringify(formData),
             success: function (data) {
                 console.log('Sucesso:', data);
-                location.href = 'http://127.0.0.1:5500/listar-hoteis.html'; // Redireciona para a página de gerenciamento de quartos com o ID do hotel
+                location.href = 'listar-hoteis.html'; 
             },
             error: function (xhr, textStatus, errorThrown) {
                 console.error('Erro:', xhr.responseJSON);

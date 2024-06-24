@@ -52,12 +52,6 @@ $(document).ready(function () {
                 var formattedDate = dataFundacao.toISOString().substring(0, 10);
                 $('#input-data-fundacao').val(formattedDate);
                 
-                // Preenchendo a quantidade de quartos
-                if (data.qtdQuartos && data.qtdQuartos.length > 0) {
-                    $('#input-qtd-quartos').val(data.qtdQuartos.length);
-                } else {
-                    $('#input-qtd-quartos').val(0); // Definir como zero se não houver quartos
-                }
             },
             error: function (data) {
                 $('#div-alert-message').prepend(data.responseText);

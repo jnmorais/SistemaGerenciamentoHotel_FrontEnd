@@ -60,8 +60,7 @@ $(document).ready(function () {
             'cafe': $('#input-cafe').val() === 'true',
             'almoco': $('#input-almoco').val() === 'true',
             'janta': $('#input-janta').val() === 'true',
-            'dataFundacao': $('#input-data-fundacao').val(),
-            'qtdQuartos': [] 
+            'dataFundacao': $('#input-data-fundacao').val()
         };
 
         $.ajax({

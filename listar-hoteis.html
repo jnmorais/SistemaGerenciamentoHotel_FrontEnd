@@ -15,26 +15,6 @@
     <link rel="stylesheet" href="http://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/listar-hoteis.css">
-    <style>
-        .dataTables_length label select {
-            color: rgb(242, 219, 11) !important;
-        }
-
-        .btn-custom {
-            color: aliceblue;
-            border: 2px solid #c49c29;
-            padding: 10px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .btn-custom:hover{
-            background-color: #fdc203;
-            color: white;
-            text-decoration: none;
-        }
-
-
-    </style>
 </head>
 
 <body>
@@ -57,9 +37,11 @@
         </header>
     </div>
 
-    <!-- Conteúdo principal -->
     <div class="container mt-4">
-        <h1 class="text-white">Listar Hotéis</h1>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="text-white">Listar Hotéis</h1>
+            <a class="btn-action btn btn-success" href="incluir-hotel.html"><i class="bi bi-plus"></i> Novo Hotel</a>
+        </div>
         <hr>
         <table id="tbListarHoteis" class="table table-striped table-hover">
             <thead>
@@ -75,16 +57,20 @@
             </tbody>
         </table>
 
-         <!-- Botão Adicionar Hotel -->
-         <div class="d-flex justify-content-center mt-4">
-            <a href="incluir-hotel.html" class="btn-custom">Adicionar Hotel</a>
-        </div>
+        <nav>
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" id="previousPage" style="display: none;">Anterior</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#" id="nextPage">Próximo</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 
-    <!-- jQuery and Bootstrap Bundle -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="http://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
     <script src="assets/js/listar-hoteis.js"></script>
