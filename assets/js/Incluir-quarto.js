@@ -9,15 +9,15 @@ $(document).ready(function () {
         // Criar objeto formData com os dados do formulário
         var formData = {
             'identificacao': $('#input-quarto').val(),
-            'tamanho': $('#input-tamanho').val(),
+            'tamanho': parseFloat($('#input-tamanho').val()), // Convertendo para double
             'status': $('#input-status').val(),
             'tipoCama': $('#input-tipo-cama').val(),
-            'quantidadeLeito': $('#input-quantidade-leito').val(),
-            'preco': $('#input-preco').val(),
+            'quantidadeLeito': parseInt($('#input-quantidade-leito').val()), // Convertendo para int
+            'preco': parseFloat($('#input-preco').val()), // Convertendo para double
             'vista': $('#input-vista').val(),
             'comodidades': $('#input-comodidades').val(),
             'descricao': $('#input-descricao').val(),
-            'hotel': $('#input-hotel').val(),
+            'hotel': $('#input-hotel').val() ? {'id': parseInt($('#input-hotel').val())} : null // Incluindo objeto de hotel
         };
 
         console.log(JSON.stringify(formData)); // Verifique os dados no console (opcional)
@@ -37,7 +37,7 @@ $(document).ready(function () {
             },
             error: function (xhr, textStatus, errorThrown) {
                 console.error('Erro:', xhr.responseJSON);
-                var message = xhr.responseJSON? JSON.stringify(xhr.responseJSON) : 'Erro ao processar a Solicitação';
+                var message = xhr.responseJSON ? JSON.stringify(xhr.responseJSON) : 'Erro ao processar a Solicitação';
                 $('#div-alert-message').text(message);
                 $('#div-alert-message').fadeIn();
             }
