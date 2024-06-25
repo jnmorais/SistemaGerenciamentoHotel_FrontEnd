@@ -76,11 +76,12 @@ $(document).ready(function () {
             data: JSON.stringify(formData),
             success: function (data) {
                 console.log('Quarto atualizado com sucesso:', data);
-                location.href = 'listar-quartos.html';
+                location.href = 'http://127.0.0.1:5500/listar-quartos.html';
             },
-            error: function (xhr, status, error) {
-                console.error('Erro ao atualizar quarto:', status, error);
-                $('#div-alert-message').text('Erro ao atualizar quarto.');
+            error: function (xhr, textStatus, errorThrown) {
+                console.error('Erro:', xhr.responseJSON);
+                var message = xhr.responseJSON ? JSON.stringify(xhr.responseJSON) : 'Erro ao atualizar quarto';
+                $('#div-alert-message').text(message);
                 $('#div-alert-message').fadeIn();
             }
         });
@@ -112,7 +113,4 @@ function carregarOpcoesHoteis() {
     });
 }
 
-// Função para esconder alerta
-function esconderAlert() {
-    $('#div-alert-message').fadeOut();
-}
+

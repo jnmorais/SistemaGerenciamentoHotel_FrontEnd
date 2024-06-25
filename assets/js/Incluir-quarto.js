@@ -1,21 +1,28 @@
 $(document).ready(function () {
+    // Carregar opções de hotéis
     carregarOpcoesHoteis();
 
+    // Processar formulário de inserção de quarto
     $('#form-inserir-quarto').submit(function (event) {
         event.preventDefault();
 
+        // Criar objeto formData com os dados do formulário
         var formData = {
             'identificacao': $('#input-quarto').val(),
-            'tamanho': parseFloat($('#input-tamanho').val()),
+            'tamanho': parseFloat($('#input-tamanho').val()), // Convertendo para double
             'status': $('#input-status').val(),
             'tipoCama': $('#input-tipo-cama').val(),
-            'quantidadeLeito': parseInt($('#input-quantidade-leito').val()), 
-            'preco': parseFloat($('#input-preco').val()),
+            'quantidadeLeito': parseInt($('#input-quantidade-leito').val()), // Convertendo para int
+            'preco': parseFloat($('#input-preco').val()), // Convertendo para double
             'vista': $('#input-vista').val(),
-            'hotel': $('#input-hotel').val() ? {"id": parseInt($('#input-hotel').val())} : null
+            'comodidades': $('#input-comodidades').val(),
+            'descricao': $('#input-descricao').val(),
+            'hotel': $('#input-hotel').val() ? {'id': parseInt($('#input-hotel').val())} : null // Incluindo objeto de hotel
         };
 
-        console.log(JSON.stringify(formData)); 
+        console.log(JSON.stringify(formData)); // Verifique os dados no console (opcional)
+
+        // Enviar os dados via AJAX
 
         $.ajax({
             headers: {
@@ -27,10 +34,10 @@ $(document).ready(function () {
             data: JSON.stringify(formData),
             success: function (data) {
                 console.log('Sucesso:', data);
-                location.href = 'listar-quartos.html';
+                location.href = 'http://127.0.0.1:5500/listar-quartos.html'; 
             },
             error: function (xhr, textStatus, errorThrown) {
-                console.error('Erro: LINHA 35 NÃO SEI', xhr.responseJSON);
+                console.error('Erro:', xhr.responseJSON);
                 var message = xhr.responseJSON ? JSON.stringify(xhr.responseJSON) : 'Erro ao processar a Solicitação';
                 $('#div-alert-message').text(message);
                 $('#div-alert-message').fadeIn();
@@ -38,7 +45,6 @@ $(document).ready(function () {
         });
     });
 });
-
 function carregarOpcoesHoteis() {
     $.ajax({
         url: 'http://localhost:8080/api/hotel',
