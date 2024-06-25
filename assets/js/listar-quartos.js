@@ -12,11 +12,11 @@ function onInit() {
         var pageData = quartosData.slice(start, end);
         var html = '';
         $.each(pageData, function(i, data) {
-            html += `<tr>`;
+            html += `<tr>`; 
             html += `<td>${data.identificacao}</td>`;
             html += `<td>${data.status}</td>`;
             html += `<td>${data.quantidadeLeito}</td>`;
-            html += `<td>${data.hotel}</td>`; // Acessa o nome do hotel
+            html += `<td>${data.hotelid}</td>`; // Acessa o nome do hotel
             html += `<td>R$ ${data.preco.toFixed(2).replace('.', ',')}</td>`;
             html += `<td>
                         <a class="btn-action btn btn-primary" href="editar-quarto.html?id=${data.id}"><i class="bi bi-pencil-fill"></i></a>
