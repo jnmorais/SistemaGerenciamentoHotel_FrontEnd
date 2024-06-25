@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 function listarQuartos() {
     $.ajax({
-        url: 'http://localhost:8080/api/quarto/', // URL da API para buscar os quartos
+        url: 'http://localhost:8080/api/quarto', // URL da API para buscar os quartos
         type: 'GET',
         dataType: 'json',
         success: function(result) {
