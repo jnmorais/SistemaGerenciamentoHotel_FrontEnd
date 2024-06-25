@@ -85,13 +85,13 @@ function removerHotel(id) {
             success: function(result, status, xhr) {
                 if (xhr.status == 200) {
                     alert('Hotel removido com sucesso');
-                    location.reload();  // Recarregar a página
+                    location.reload();  
                 } else {
                     alert('Erro ao remover hotel: ' + xhr.responseText);
                 }
             },
             error: function(xhr, status, error) {
-                alert('Hotel removido ' + xhr.responseText);
+                alert('Hotel removido ');
             }
         });
     }

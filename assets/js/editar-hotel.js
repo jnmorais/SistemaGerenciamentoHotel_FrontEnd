@@ -12,7 +12,6 @@ function GetURLParameter(sParam) {
 var id_hotel = GetURLParameter("id");
 
 $(document).ready(function () {
-    // Buscar dados do hotel para preencher o formulário
     $.ajax({
         url: 'http://localhost:8080/api/hotel/' + id_hotel,
         type: 'GET',
@@ -27,14 +26,8 @@ $(document).ready(function () {
             $("#input-almoco").val(data.almoco.toString());
             $("#input-janta").val(data.janta.toString());
 
-            // Verificar se data.qtdQuartos está definido antes de acessar length
-            if (data.qtdQuartos !== undefined) {
-                $("#input-qtd-quartos").val(data.qtdQuartos.length);
-            } else {
-                $("#input-qtd-quartos").val(0); // Definir como zero se não estiver definido
-            }
+           
 
-            // Formatando a data de fundação para o formato adequado
             var dataFundacao = new Date(data.dataFundacao);
             var formattedDate = dataFundacao.toISOString().substring(0, 10);
             $("#input-data-fundacao").val(formattedDate);
