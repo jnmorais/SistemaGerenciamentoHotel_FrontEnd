@@ -76,7 +76,7 @@ $(document).ready(function () {
                 location.href = 'listar-hoteis.html';
             },
             error: function (data) {
-                $('#div-alert-message').prepend(data.responseText);
+                $('#div-alert-message').html("Erro ao atualizar hotel.");
                 $('#div-alert-message').fadeIn();
             }
         });
