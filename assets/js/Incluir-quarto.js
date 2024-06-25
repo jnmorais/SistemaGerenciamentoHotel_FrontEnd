@@ -9,20 +9,21 @@ $(document).ready(function () {
         // Criar objeto formData com os dados do formulário
         var formData = {
             'identificacao': $('#input-quarto').val(),
-            'tamanho': $('#input-tamanho').val(),
+            'tamanho': parseFloat($('#input-tamanho').val()), // Convertendo para double
             'status': $('#input-status').val(),
             'tipoCama': $('#input-tipo-cama').val(),
-            'quantidadeLeito': $('#input-quantidade-leito').val(),
-            'preco': $('#input-preco').val(),
+            'quantidadeLeito': parseInt($('#input-quantidade-leito').val()), // Convertendo para int
+            'preco': parseFloat($('#input-preco').val()), // Convertendo para double
             'vista': $('#input-vista').val(),
             'comodidades': $('#input-comodidades').val(),
             'descricao': $('#input-descricao').val(),
-            'hotel': $('#input-hotel').val(),
+            'hotel': $('#input-hotel').val() ? {'id': parseInt($('#input-hotel').val())} : null // Incluindo objeto de hotel
         };
 
         console.log(JSON.stringify(formData)); // Verifique os dados no console (opcional)
 
         // Enviar os dados via AJAX
+
         $.ajax({
             headers: {
                 'Accept': 'application/json',
@@ -33,18 +34,17 @@ $(document).ready(function () {
             data: JSON.stringify(formData),
             success: function (data) {
                 console.log('Sucesso:', data);
-                location.href = 'http://127.0.0.1:5500/listar-quartos.html'; // Redireciona para a página de gerenciamento de quartos com o ID do hotel
+                location.href = 'http://127.0.0.1:5500/listar-quartos.html'; 
             },
             error: function (xhr, textStatus, errorThrown) {
                 console.error('Erro:', xhr.responseJSON);
-                var message = xhr.responseJSON? JSON.stringify(xhr.responseJSON) : 'Erro ao processar a Solicitação';
+                var message = xhr.responseJSON ? JSON.stringify(xhr.responseJSON) : 'Erro ao processar a Solicitação';
                 $('#div-alert-message').text(message);
                 $('#div-alert-message').fadeIn();
             }
         });
     });
 });
-
 function carregarOpcoesHoteis() {
     $.ajax({
         url: 'http://localhost:8080/api/hotel',

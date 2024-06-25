@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizar Quarto</title>
+    <title>Editar Quarto</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -30,78 +31,87 @@
             <div class="col-md-3"></div>
         </header>
     </div>
-
     <div class="container">
-        <h2>Visualizar Quarto</h2>
+        <h2>Editar Quarto</h2>
 
         <div class="alert alert-danger collapse" role="alert" id="div-alert-message">
             <a class="close" onclick="esconderAlert()">×</a>
         </div>
 
-        <form id="form-visualizar-quarto" action="listar-quartos.html">
+        <form id="form-editar-quarto" action="listar-quartos.html">
             <div class="form-group">
                 <label for="input-identificacao">Identificação</label>
-                <input type="text" class="form-control" id="input-identificacao" readonly>
+                <input type="text" class="form-control" id="input-identificacao" placeholder="Identificação"
+                    maxlength="100" required>
             </div>
 
             <div class="form-group">
                 <label for="input-tamanho">Tamanho</label>
-                <input type="number" class="form-control" id="input-tamanho" readonly>
+                <input type="number" class="form-control" id="input-tamanho" placeholder="Tamanho" required>
             </div>
 
             <div class="form-group">
                 <label for="input-status">Status</label>
-                <input type="text" class="form-control" id="input-status" readonly>
+                <input type="text" class="form-control" id="input-status" placeholder="Status" maxlength="50"
+                    required>
             </div>
 
             <div class="form-group">
                 <label for="input-tipo-cama">Tipo de Cama</label>
-                <input type="text" class="form-control" id="input-tipo-cama" readonly>
+                <input type="text" class="form-control" id="input-tipo-cama" placeholder="Tipo de Cama" maxlength="50"
+                    required>
             </div>
 
             <div class="form-group">
                 <label for="input-quantidade-leito">Quantidade de Leitos</label>
-                <input type="number" class="form-control" id="input-quantidade-leito" readonly>
+                <input type="number" class="form-control" id="input-quantidade-leito" placeholder="Quantidade de Leitos"
+                    required>
             </div>
 
             <div class="form-group">
                 <label for="input-preco">Preço</label>
-                <input type="number" class="form-control" id="input-preco" readonly>
+                <input type="number" step="0.01" class="form-control" id="input-preco" placeholder="Preço" required>
             </div>
 
             <div class="form-group">
                 <label for="input-vista">Vista</label>
-                <input type="text" class="form-control" id="input-vista" readonly>
+                <input type="text" class="form-control" id="input-vista" placeholder="Vista" maxlength="100" required>
             </div>
 
             <div class="form-group">
                 <label for="input-comodidades">Comodidades</label>
-                <input type="text" class="form-control" id="input-comodidades" readonly>
+                <input type="text" class="form-control" id="input-comodidades" placeholder="Comodidades" maxlength="255"
+                    required>
             </div>
 
             <div class="form-group">
                 <label for="input-descricao">Descrição</label>
-                <textarea class="form-control" id="input-descricao" readonly></textarea>
+                <textarea class="form-control" id="input-descricao" placeholder="Descrição" maxlength="500"
+                    required></textarea>
             </div>
 
             <div class="form-group">
                 <label for="input-hotel">Hotel</label>
-                <input type="text" class="form-control" id="input-hotel" readonly>
+                <select class="form-control" id="input-hotel" data-hotel-id="" required>
+                    <!-- Opções serão carregadas dinamicamente -->
+                </select>
             </div>
 
             <hr>
             <a class="btn btn-secondary" href="listar-quartos.html" role="button">Voltar</a>
+            <button type="submit" class="btn btn-primary">Salvar</button>
         </form>
     </div>
 
-    <!-- jQuery -->
+    <!-- jQuery (Versão Completa) -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
     <!-- Bootstrap Bundle (incluindo Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
 
     <!-- Script personalizado -->
-    <script src="assets/js/visualizar-quarto.js"></script>
+    <script src="assets/js/editar-quarto.js"></script>
+
 </body>
 
 </html>
